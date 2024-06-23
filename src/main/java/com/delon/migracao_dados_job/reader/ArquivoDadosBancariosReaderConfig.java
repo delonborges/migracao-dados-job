@@ -8,12 +8,12 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.FileSystemResource;
 
 @Configuration
-public class ArquivoDadosBancariosReader {
+public class ArquivoDadosBancariosReaderConfig {
 
     @Bean
     public FlatFileItemReader<DadosBancarios> arquivoDadosBancariosReader() {
         return new FlatFileItemReaderBuilder<DadosBancarios>().name("arquivoDadosBancariosReader")
-                                                              .resource(new FileSystemResource("files/dados_bancarios.csv"))
+                                                              .resource(new FileSystemResource("src/main/resources/files/dados_bancarios.csv"))
                                                               .delimited()
                                                               .names("pessoaId", "agencia", "conta", "banco", "id")
                                                               .addComment("--")

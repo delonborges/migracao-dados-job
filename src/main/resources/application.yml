@@ -1,0 +1,22 @@
+spring:
+
+  application:
+    name: migracao_dados_job
+
+  datasource:
+    sbd:
+      username: delon
+      password: delon
+      jdbc-url: jdbc:mysql://localhost:3306/spring_batch?useSSL=false
+    app:
+      username: delon
+      password: delon
+      jdbc-url: jdbc:mysql://localhost:3306/migracao_dados?useSSL=false
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+  batch:
+    jdbc:
+      initialize-schema: always
