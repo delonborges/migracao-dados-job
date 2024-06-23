@@ -26,10 +26,9 @@
 
 ## 💻 Projeto
 
-migracao-dados-job é um serviço web que efetua a migração de dados de arquivos CSV para um banco de dados.
+migracao-dados-job é um serviço que efetua a migração de dados de arquivos CSV para um banco de dados.
 
-Esse projeto foi elaborado durante o curso [Desenvolvimento de jobs com Spring Batch](https://www.udemy.com/share/103eh43@WkfdGKu8A6NAdGpSxOIOLN9tjcdECAP3NEiN3MdU4dH98wKcM9gwKAvTr6u4EryC/),
-em que o foco foi a criação de testes automatizados.
+Esse projeto foi elaborado durante o curso [Desenvolvimento de jobs com Spring Batch](https://www.udemy.com/share/103eh43@WkfdGKu8A6NAdGpSxOIOLN9tjcdECAP3NEiN3MdU4dH98wKcM9gwKAvTr6u4EryC/).
 
 ## 🛠️ Configuração
 
@@ -38,8 +37,9 @@ O projeto requer um banco de dados Mysql, então é necessário criar uma base d
 ```
 $ sudo mysql
 
-CREATE USER 'username'@'%' IDENTIFIED BY 'password';
-GRANT ALL PRIVILEGES ON *.* TO 'user'@'%' WITH GRANT OPTION;
+CREATE USER 'username'@'%%' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON * . * TO 'username'@'%%';
+FLUSH PRIVILEGES;
 
 exit
 
