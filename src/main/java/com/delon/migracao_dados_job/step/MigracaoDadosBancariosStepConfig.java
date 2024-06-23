@@ -23,7 +23,7 @@ public class MigracaoDadosBancariosStepConfig {
 
     @Bean
     public Step migracaoDadosBancariosStep(ItemReader<DadosBancarios> arquivoDadosBancariosReader, ItemWriter<DadosBancarios> bancoDadosBancariosWriter) {
-        return new StepBuilder("migracaoDadosBancariosStep", jobRepository).<DadosBancarios, DadosBancarios>chunk(1, transactionManager)
+        return new StepBuilder("migracaoDadosBancariosStep", jobRepository).<DadosBancarios, DadosBancarios>chunk(10000, transactionManager)
                                                                            .reader(arquivoDadosBancariosReader)
                                                                            .writer(bancoDadosBancariosWriter)
                                                                            .build();
